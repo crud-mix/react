@@ -7,4 +7,4 @@
 4. Move to app directory, `cd <projecName>`
 5. Lets run it `npm start`
 
-### Hooray you are a react developer
+### Enjoy Coding
