@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams } from "react-router-dom";
-import HelloWorldComponent from './HelloWorldComponent/HelloWorldComponent';
+import HelloWorldComponent from './HelloWorld/HelloWorldComponent';
+import ArrayoperationsComponent from './ArrayOperations/ArrayOperationsComponent';
 const routes = [
     {
         path: 'helloworld',
@@ -10,7 +11,7 @@ const routes = [
     {
         path: 'arrayoperation',
         linkText: 'Array Operation',
-        component: HelloWorldComponent
+        component: ArrayoperationsComponent
     }
 ]
 
