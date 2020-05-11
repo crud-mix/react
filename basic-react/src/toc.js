@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams } from "react-router-dom";
 import HelloWorldComponent from './HelloWorldComponent/HelloWorldComponent';
 const routes = [
     {
@@ -17,23 +17,32 @@ const routes = [
 function MapRouteAndLinks() {
     const { path, url } = useRouteMatch();
     return (
+
         <Switch>
             <Route exact path={"/toc"}>
                 {routes.map(route => <Link key={route.path} to={`${url}/${route.path}`}>{route.linkText}<br /></Link>)}
-                {path}
+                {path} <br /> {url}
             </Route>
-            {/* <Route path={`${path}`} component={routes.find(route => route.path == `${path}`).component}>
+            <Route path={`${path}/:compId`}>
+                <RenderComponent />
+            </Route>
 
-            </Route> */}
         </Switch>
 
+    )
+}
+
+function RenderComponent() {
+    let { compId } = useParams();
+    return (
+        <Route component={routes.find(route => route.path === compId).component} />
     )
 }
 
 export class TableOfContents extends React.Component {
     render() {
         return (
-                <MapRouteAndLinks />
+            <MapRouteAndLinks />
         )
     }
 
