@@ -22,7 +22,6 @@ function MapRouteAndLinks() {
         <Switch>
             <Route exact path={"/toc"}>
                 {routes.map(route => <Link key={route.path} to={`${url}/${route.path}`}>{route.linkText}<br /></Link>)}
-                {path} <br /> {url}
             </Route>
             <Route path={`${path}/:compId`}>
                 <RenderComponent />
