@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch, useParams 
 import HelloWorldComponent from './HelloWorld/HelloWorldComponent';
 import ArrayoperationsComponent from './ArrayOperations/ArrayOperationsComponent';
 import FunctionComponent from './FunctionComponent/FunctionComponent';
+import StateAndPropsComponent from './StateAndProps/stateAndPropsComponent';
 const routes = [
     {
         path: 'helloworld',
@@ -18,6 +19,11 @@ const routes = [
         path: 'functioncomponent',
         linkText: 'Function Component',
         component: FunctionComponent
+    },
+    {
+        path: 'staeandprops',
+        linkText: 'State and Props',
+        component: StateAndPropsComponent
     }
 ]
 
