@@ -16,7 +16,7 @@ function SimpleComponent(props) {
     return (
         <div>
             <h3>Function Component</h3>
-            <p>The simplest way to define a component is to write a JavaScript functio</p>
+            <p>The simplest way to define a component is to write a JavaScript function</p>
             <p>
                 <span>{props.data.name}</span> is <span>{props.data.age} year(s) old</span>
             </p>

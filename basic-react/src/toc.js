@@ -4,6 +4,7 @@ import HelloWorldComponent from './HelloWorld/HelloWorldComponent';
 import ArrayoperationsComponent from './ArrayOperations/ArrayOperationsComponent';
 import FunctionComponent from './FunctionComponent/FunctionComponent';
 import StateAndPropsComponent from './StateAndProps/stateAndPropsComponent';
+import HandleEventComponent from './HandleEvents/HandleEventComponent';
 const routes = [
     {
         path: 'helloworld',
@@ -24,6 +25,11 @@ const routes = [
         path: 'staeandprops',
         linkText: 'State and Props',
         component: StateAndPropsComponent
+    },
+    {
+        path: 'eventhandle',
+        linkText: 'Handle Events',
+        component: HandleEventComponent
     }
 ]
 
